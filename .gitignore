@@ -1,0 +1,12 @@
+.env
+*.log
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+venv/
+.idea/
+.vscode/
+
+# Docker
+**/node_modules/
