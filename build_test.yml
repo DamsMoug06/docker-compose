@@ -1,5 +1,4 @@
 name: CI Docker Scan
-
 on:
   push:
     branches: [master]
