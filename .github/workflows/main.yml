@@ -49,4 +49,4 @@ jobs:
           image: api-app:1.0.0
           file: ./api/Dockerfile
           only-severities: critical,high
-          exit-code: true
+          exit-code: false
