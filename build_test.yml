@@ -15,3 +15,12 @@ on:
       - name: Build image for mongo
         run: docker build -t my-app:1.0.0 -f ./mongo/Dockerfile .
         run: docker build -t my-app:1.0.0 -f ./api/Dockerfile .
+        - name: Docker Scout Scan
+        uses: docker/scout-action@v1
+        with:
+          command: cves
+          image: my-app:1.0.0
+          file: ./mongo/Dockerfile
+          file: ./api/Dockerfile
+          only-severities: critical,high
+          exit-code: true
